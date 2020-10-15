@@ -1,0 +1,21 @@
+<div *ngIf="isAlertVisible" class="row">
+    <div class="alert alert-success w-100 fade show" role="alert">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="hideAlert()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h2>Ksiązki:</h2>
+       <button class="btn btn-primary mr-3" (click)="getAll()">Wszystkie</button>
+       <button class="btn btn-primary mr-3" (click)="getBorrowed()">Wypożyczone</button>
+       <button class="btn btn-primary mr-3" (click)="getWihslist()">Do wypożyczenia</button>
+    </div>
+</div>
+<div class="row">
+    <div *ngFor="let book of books" class="col-md-4" style="padding: 1em;">
+      <book-item [book]="book" (borrowed)="onBorrowed($event)" (returned)="onReturned($event)" (addedToWihslist)="onAddedToWihslist($event)" (removedFromWihslist)="onRemovedFromWihslist($event)"></book-item>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>E_Library.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E-Library.DAL\E-Library.DAL.csproj" />
+    <ProjectReference Include="..\E-Library.Resources\E-Library.Resources.csproj" />
+  </ItemGroup>
+
+</Project>
