@@ -1,6 +1,12 @@
 # E-Library
 Web application for managing a library.
-# Database
+
+# Docker
+The easiest way to run the application is run via docker.
+Open terminal navigate to main foler E-Library and use docker compose to compile and start application `docker-compose up`.
+
+# Local
+## Database
 MS Sql Serve
 
 **Local instance:** downlaod and install sql server [link](https://www.microsoft.com/pl-pl/sql-server/sql-server-downloads)
