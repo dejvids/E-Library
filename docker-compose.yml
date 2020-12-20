@@ -1,3 +1,4 @@
+version: '2'
 services:
   api:
     build: ./E-Library-API
@@ -6,10 +7,10 @@ services:
     environment: 
       ASPNETCORE_ENVIRONMENT: "Docker"
     depends_on:
-        - sqlserver
+      - sqlserver
     links: 
       - "sqlserver:sqlserver"
-
+      
   sqlserver:
     build: ./SQL
     ports:
@@ -17,8 +18,8 @@ services:
     environment: 
       ACCEPT_EULA: "Y"
       SA_PASSWORD: "Test12345678"
-      ENV MSSQL_PID: "Developer"
-      ENV MSSQL_TCP_PORT: 1433
+      MSSQL_PID: "Developer"
+      MSSQL_TCP_PORT: "1433"
   
   frontend:
     build: ./E-Library-Frontend
