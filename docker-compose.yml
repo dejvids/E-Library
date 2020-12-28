@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   api:
     build: ./E-Library-API
@@ -20,8 +20,12 @@ services:
       SA_PASSWORD: "Test12345678"
       MSSQL_PID: "Developer"
       MSSQL_TCP_PORT: "1433"
+    volumes:
+      - sql-volume:/var/opt/mssql
   
   frontend:
     build: ./E-Library-Frontend
     ports:
       - 80:80
+volumes:
+  sql-volume:
