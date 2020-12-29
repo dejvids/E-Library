@@ -1,7 +1,7 @@
-FROM mcr.microsoft.com/mssql/server:2019-CU8-ubuntu-16.04
+FROM mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
  
 ENV ACCEPT_EULA=Y
-ENV SA_PASSWORD=Test12345678
+ENV MSSQL_SA_PASSWORD=Test12345678
 ENV MSSQL_PID=Developer
 ENV MSSQL_TCP_PORT=1433 
 
