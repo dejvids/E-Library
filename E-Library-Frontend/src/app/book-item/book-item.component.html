@@ -6,8 +6,15 @@
         <p *ngIf="canBeReturn" class="">Data wypożyczenia: {{ book.borrowDate | date : 'dd-mm-yyyy' }}</p>
         <p class="card-text">{{ book.description }}</p>
         <P *ngIf="isFree">Dostępne egzemplarze: {{book.freeCount}}/{{book.totalCount}}</P>
-        <button  *ngIf="canBeBorrowed" (click)="borrow()" class="btn btn-success w-45">Wypożycz</button>
-        <button *ngIf="canBeAddToWihslist" (click)="addToWihslist()" class="btn btn-secondary float-right w-45">Do wypożyczenia</button>
+        <div class="row">
+            <div class="col-md-6 p-1">
+                <button  *ngIf="canBeBorrowed"  (click)="borrow()" class="btn btn-success w-100">Wypożycz</button>
+            </div>
+            <div class=" col-md-6 p-1">
+                <button *ngIf="canBeAddToWihslist" (click)="addToWihslist()" class="btn btn-secondary w-100">Do wypożyczenia</button>
+            </div>
+            
+        </div>
         <button *ngIf="canBeReturn" (click)="returnBook()" class="btn btn-warning float-right w-100">Zwróć</button>
         <button *ngIf="canBeDeleteFromWihslist" (click)="removeFromWihslist()" class="btn btn-danger float-right w-100">Usuń z listy "Do wypożyczenia"</button>
     </div>

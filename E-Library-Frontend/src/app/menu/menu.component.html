@@ -1,0 +1,19 @@
+<div class="row">
+<div class="col-md-12">
+    <h2>Ksiązki:</h2>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <button class="nav-link" [class.active]="selectedFilter == 0" (click)="getAll()">Wszystkie</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" [class.active]="selectedFilter == 1" (click)="getBorrowed()">Wypożyczone</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" [class.active]="selectedFilter == 2" (click)="getWihslist()">Do wypożyczenia</button>
+        </li>
+    </ul>
+   <!-- <button class="btn btn-primary mr-3" (click)="getAll()">Wszystkie</button>
+   <button class="btn btn-primary mr-3" (click)="getBorrowed()">Wypożyczone</button>
+   <button class="btn btn-primary mr-3" (click)="getWihslist()">Do wypożyczenia</button> -->
+</div>
+</div>
